@@ -3084,8 +3084,12 @@ if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register('/sw.js');
   });
 }</script>
+
+
 <style>
-/* --- ORIGINAL STABLE COMPACT SINGLE ROW NAV DESIGN --- */
+/* ==========================================================================
+   SECTION 1: DESKTOP SINGLE ROW BUTTON LAYOUT
+   ========================================================================== */
 ul[data-ux="List"] {
     display: flex !important;
     flex-direction: row !important;
@@ -3129,6 +3133,9 @@ ul[data-ux="List"] li a:focus,
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2) !important;
 }
 
+/* ==========================================================================
+   SECTION 2: DROPDOWN CLOSERS AND SNAP-OPEN TRIGGERS
+   ========================================================================== */
 ul[data-ux="NavDropdown"], 
 ul[role="menu"],
 [id*="more-"],
@@ -3172,7 +3179,9 @@ ul[role="menu"] li a:hover,
     text-decoration: none !important;
 }
 
-/* WIPE ONLY DETACHED HAMBURGER AND FIXED STICKY DUPLICATE LINK OVERLAYS */
+/* ==========================================================================
+   SECTION 3: SURGICAL HIDDEN DUPLICATE MOBILE DRAWER LOGIC
+   ========================================================================== */
 a[data-aid="HAMBURGER_MENU_LINK"],
 div[id*="-navId-mobile"],
 div[id*="-navContainerId-mobile"],
@@ -3191,18 +3200,20 @@ ul#n-12125-navListId-mobile,
 </style>
 
 <script>
-  /* CENTRAL ROUTING RE-MAP ENGINE: CONNECTS ALL NATIVE CORES TO ABSOLUTE CORRIDORS */
+  /* ==========================================================================
+     SECTION 4: CORRECTED CENTRAL ROUTING AUTOMATION RE-MAP ENGINE
+     ========================================================================== */
   document.addEventListener("DOMContentLoaded", function() {
     const routeMapRegistry = {
       "home": "https://lolaarowolo.com",
-      "photos": "https://lolaarowolo.commedia-photos/",
-      "service": "https://lolaarowolo.commedia-service/",
-      "white papers": "https://lolaarowolo.compublications-white-papers/",
-      "reports": "https://lolaarowolo.compublications-reports/",
-      "contributions": "https://lolaarowolo.compublications-contributions/",
-      "lectures": "https://lolaarowolo.compublications-lectures/",
-      "professional experience": "https://lolaarowolo.comprofessional-experience/",
-      "contact": "https://lolaarowolo.comcontact/"
+      "photos": "https://lolaarowolo.com/media-photos/",
+      "service": "https://lolaarowolo.com/media-service/",
+      "white papers": "https://lolaarowolo.com/publications-white-papers/",
+      "reports": "https://lolaarowolo.com/publications-reports/",
+      "contributions": "https://lolaarowolo.com/publications-contributions/",
+      "lectures": "https://lolaarowolo.com/publications-lectures/",
+      "professional experience": "https://lolaarowolo.com/professional-experience/",
+      "contact": "https://lolaarowolo.com/contact/"
     };
     
     document.querySelectorAll("a").forEach(linkElement => {
